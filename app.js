@@ -1,8 +1,5 @@
-reverseString = string => {
-    const splittedString = string.split("")
-    const reversedArray = splittedString.reverse()
-    const joinedArray = reversedArray.join("")
-    return joinedArray
+function reverseWords(string) {
+    return string.replace(/[a-z]+/ig, function(w){return w.split('').reverse().join('')})
 }
- 
-reverseString(`Lukas is a React Developer`)
+  
+console.log(reverseWords("Hi Daniele, How are you?"))
